@@ -15,7 +15,7 @@ Else
 6.	Return 0
  
 Program:
-
+```
 #include <stdio.h>
 struct elig
 {
@@ -40,7 +40,7 @@ int main()
     }
     return 0;
 }
-
+```
 
 Output:
 
@@ -109,7 +109,7 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
+```
 #include <stdio.h>
 int main()
 {
@@ -124,7 +124,7 @@ int main()
     printf("File Closed\n");
     return 0;
 }
-
+```
 
 Output:
 
@@ -157,7 +157,7 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-
+```
 #include <stdio.h>
 int main()
 {
@@ -178,7 +178,7 @@ int main()
     fprintf(file,"Employee mark:%d\n",m);
     printf("Data added Successfully\n");
 }
-
+```
 
 Output:
 
