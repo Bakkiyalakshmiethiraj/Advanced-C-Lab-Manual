@@ -9,7 +9,7 @@ Algorithm:
 4.	Call the search function and perform other linked list operations as needed.
  
 Program:
-
+```
 struct Node{
     float data; 
     struct Node *next;
@@ -35,7 +35,7 @@ void search(float data)
         printf("Item not found");
     }
 }
-
+```
 
 Output:
 
@@ -57,7 +57,7 @@ Algorithm:
  
 Program:
 
-
+```
 struct Node{
     int data; 
     struct Node *next;
@@ -84,7 +84,7 @@ void insert(int data)
     current->next=nnode;
     
 }
-
+```
 
 Output:
 
@@ -107,7 +107,7 @@ Algorithm:
  
 Program:
 
-
+```
 struct Node
 {
     int data;
@@ -124,7 +124,7 @@ void display()
         temp=temp->next;
     }
 }
-
+```
 
 Output:
 
@@ -136,8 +136,8 @@ Thus, the program to traverse a doubly linked list is verified successfully.
 
 
 EXP NO:19 C PROGRAM TO INSERT AN ELEMENT IN DOUBLY LINKED LIST
-Aim:
-To write a C program to insert an element in doubly linked list
+
+Aim: To write a C program to insert an element in doubly linked list
 
 Algorithm:
 1.	Create a new node (newNode) and allocate memory for it.
@@ -148,7 +148,7 @@ Algorithm:
  
 Program:
 
-
+```
 struct Node{
     char data; 
     struct Node *next;
@@ -178,7 +178,7 @@ void insert(char data)
     
     
 }
-
+```
 
 Output:
 
@@ -192,12 +192,11 @@ Thus, the program to insert an element in doubly linked list is verified success
 
 EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
 
-Aim:
-To write a C function that deletes a given element from a linked list.
+Aim: To write a C function that deletes a given element from a linked list.
 
 Algorithm:
 1.	Check if the Linked List is Empty:
-o	If the head of the linked list is NULL, print a message indicating the list is empty and exit the function.
+	If the head of the linked list is NULL, print a message indicating the list is empty and exit the function.
 2.	Traverse the Linked List:
 o	Start from the head node and iterate through the list to find the node that contains the given element (data).
 3.	Handle Deletion of the First Node:
@@ -216,7 +215,7 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 Program:
 
-
+```
 struct Node{
     int data; 
     struct Node *prev;
@@ -234,7 +233,7 @@ void delete()
         printf("UNDERFLOW\n");
     }
 }
-
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/9399e2d8-c2a9-4622-9856-8001ff907745)
