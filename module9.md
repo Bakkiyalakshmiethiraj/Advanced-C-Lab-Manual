@@ -12,7 +12,7 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
-
+```
 int stack[100],top,i;
 void display()
 {
@@ -21,7 +21,7 @@ void display()
         printf("%d\n",stack[i]);
     }
 }
-
+```
 
 Output:
 
@@ -46,7 +46,7 @@ Algorithm:
  
 Program:
 
-
+```
 char stack[100];
 int size=3,top=-1;
 void push (char data)
@@ -61,7 +61,7 @@ void push (char data)
         stack[top]=data;
     }
 }
-
+```
 
 Output:
 
@@ -86,7 +86,7 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
-
+```
 float queue[100];
 int front,rear,i;
 void display()
@@ -103,7 +103,7 @@ void display()
         }
     }
 }
-
+```
 
 Output:
 
@@ -129,7 +129,7 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
-
+```
 float queue[50];
 int front,rear,size=5;
 void enqueue(float data)
@@ -141,7 +141,7 @@ void enqueue(float data)
         queue[rear]=data;
     }
 }
-
+```
 
 Output:
 
@@ -171,10 +171,9 @@ o	Increment the front pointer by 1 to remove the element and point to the next e
 o	After deletion, check if the front pointer has passed the rear pointer (front > rear). If this is true, reset both front and rear to -1, indicating that the queue is now empty.
 4.	End the Function.
 
-
-
 Program:
 
+```
 int queue[50];
 int front, rear,i;
 void dequeue()
@@ -188,7 +187,7 @@ void dequeue()
         front++;
     }
 }
-
+```
 
 Output:
 
