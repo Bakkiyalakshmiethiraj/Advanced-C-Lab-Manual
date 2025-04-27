@@ -16,12 +16,36 @@ Else
  
 Program:
 
-//type your code here
+#include <stdio.h>
+struct elig
+{
+    int age;
+    char name[50];
+};
+
+int main()
+{
+    struct elig e;
+    scanf("%d",&e.age);
+    scanf("%s",e.name);
+    printf("Age:%d\n",e.age);
+    printf("Name:%svaccine:%d\n",e.name,e.age);
+    if(e.age>18)
+    {
+        printf("eligibility:yes");
+    }
+    else
+    {
+        printf("eligibility:no");
+    }
+    return 0;
+}
 
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/eb04fe62-a027-4e1e-ac48-204368ff4296)
+
 
 
 Result:
@@ -86,25 +110,25 @@ Use scanf to input the file name into the name array.
  
 Program:
 
-//type your code here
-
-
+#include <stdio.h>
+int main()
+{
+    FILE *file;
+    file=fopen("Staff.txt","w");
+    if(file!=NULL)
+    {
+        printf("File Created Successfully\n");
+        printf("File Opened\n");
+    }
+    fclose(file);
+    printf("File Closed\n");
+    return 0;
+}
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/6dc4dd44-a3c6-49fd-9de4-1c3bbda54bf0)
 
 Result:
 Thus, the program is verified successfully
@@ -133,19 +157,32 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
 
-
+#include <stdio.h>
+int main()
+{
+    FILE *file;
+    char a[30];
+    int sno,m;
+    char sub[40];
+    scanf("%s",a);
+    file=fopen(a,"w");
+    if(file==NULL)
+    {
+        printf("Error Creating the File!\n");
+    }
+    printf("%s Opened\n",a);
+    scanf("%d %s %d",&sno,sub,&m);
+    fprintf(file,"Employee roll_no:%d\n",sno);
+    fprintf(file,"Employee name:%s\n",sub);
+    fprintf(file,"Employee mark:%d\n",m);
+    printf("Data added Successfully\n");
+}
 
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![image](https://github.com/user-attachments/assets/849ad1ca-da78-456d-a435-37d06f9263bd)
 
 
 Result:
@@ -160,17 +197,11 @@ The aim of this program is to dynamically allocate memory to store information a
 
 Algorithm:
 1.Input the number of subjects.
-
 2.Read the integer value n from the user, which represents the number of subjects.
-
 3.Dynamically allocate memory:
-
 4.Use malloc to allocate memory for n subjects. Each subject has a name (array of characters) and marks (integer).
-
 5.If memory allocation fails (i.e., the pointer s is NULL), display an error message and exit the program.
-
 6.Input the details of each subject
-
 7.Use a for loop to read the name and marks of each subject using scanf. For each subject, store the name as a string and marks as an integer in the dynamically allocated memory.
 
 8.Display the details of each subject
