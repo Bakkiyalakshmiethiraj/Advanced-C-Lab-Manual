@@ -17,35 +17,32 @@ Else
 Program:
 ```
 #include <stdio.h>
-struct elig
-{
-    int age;
+#include <string.h>
+
+struct Person {
     char name[50];
+    int age;
 };
 
-int main()
-{
-    struct elig e;
-    scanf("%d",&e.age);
-    scanf("%s",e.name);
-    printf("Age:%d\n",e.age);
-    printf("Name:%svaccine:%d\n",e.name,e.age);
-    if(e.age>18)
-    {
-        printf("eligibility:yes");
-    }
+int main() {
+    struct Person p;
+    scanf("%d", &p.age);
+    scanf("%s", p.name);
+    printf("Age:%d\n", p.age);
+    printf("Name:%svaccine:%d\n",p.name,p.age);
+    
+   
+    if(p.age>6)
+    printf("eligibility:yes");
     else
-    {
-        printf("eligibility:no");
-    }
+    printf("eligibility:no");
     return 0;
 }
 ```
 
 Output:
 
-![image](https://github.com/user-attachments/assets/eb04fe62-a027-4e1e-ac48-204368ff4296)
-
+![Screenshot 2025-04-27 152752](https://github.com/user-attachments/assets/44b2eaac-3284-44c8-a902-da1e7fbf8b76)
 
 
 Result:
@@ -68,15 +65,24 @@ Algorithm:
  
 Program:
 
-//type your code here
-
-
-
+```
+#include<stdio.h>
+struct add
+{
+    int a,b;
+}n;
+int main()
+{
+    scanf("%d%d",&n.a,&n.b);
+    printf("%d",n.a+n.b);
+}
+```
 
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-27 152117](https://github.com/user-attachments/assets/1e8adc3d-0478-4b66-a77f-ef205dc5540d)
+
 
 
 
@@ -109,26 +115,30 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+
 ```
 #include <stdio.h>
 int main()
 {
-    FILE *file;
-    file=fopen("Staff.txt","w");
-    if(file!=NULL)
-    {
-        printf("File Created Successfully\n");
-        printf("File Opened\n");
-    }
-    fclose(file);
-    printf("File Closed\n");
-    return 0;
+    FILE *fp;
+    char a[20];
+    scanf("%s",a);
+    printf("%s File Created Successfully\n",a);
+    fp = fopen("a","w");
+    printf("%s File Opened\n",a);
+    fclose(fp);
+    printf("%s File Closed\n",a);
 }
 ```
 
+
+
+
 Output:
 
-![image](https://github.com/user-attachments/assets/6dc4dd44-a3c6-49fd-9de4-1c3bbda54bf0)
+
+![Screenshot 2025-04-27 152419](https://github.com/user-attachments/assets/abf2d53f-8073-4508-b683-2c7a44538a8a)
+
 
 Result:
 Thus, the program is verified successfully
@@ -156,33 +166,30 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
 ```
 #include <stdio.h>
 int main()
 {
-    FILE *file;
-    char a[30];
-    int sno,m;
-    char sub[40];
-    scanf("%s",a);
-    file=fopen(a,"w");
-    if(file==NULL)
+    FILE *fp;
+    char name[30] , b[30];
+    int a;
+    scanf("%s",name);
+    scanf("%d",&a);
+    fp = fopen("name" , "w");
+    printf("%s Opened\n",name);
+    for(int i=0 ; i<a ; i++)
     {
-        printf("Error Creating the File!\n");
+        scanf("%s",b);
+        fputs(b,fp);
     }
-    printf("%s Opened\n",a);
-    scanf("%d %s %d",&sno,sub,&m);
-    fprintf(file,"Employee roll_no:%d\n",sno);
-    fprintf(file,"Employee name:%s\n",sub);
-    fprintf(file,"Employee mark:%d\n",m);
     printf("Data added Successfully\n");
 }
 ```
 
 Output:
 
-![image](https://github.com/user-attachments/assets/849ad1ca-da78-456d-a435-37d06f9263bd)
+
+![Screenshot 2025-04-27 152605](https://github.com/user-attachments/assets/ca8cc7ab-d94a-410f-91a6-3077afbf6fcd)
 
 
 Result:
@@ -197,11 +204,17 @@ The aim of this program is to dynamically allocate memory to store information a
 
 Algorithm:
 1.Input the number of subjects.
+
 2.Read the integer value n from the user, which represents the number of subjects.
+
 3.Dynamically allocate memory:
+
 4.Use malloc to allocate memory for n subjects. Each subject has a name (array of characters) and marks (integer).
+
 5.If memory allocation fails (i.e., the pointer s is NULL), display an error message and exit the program.
+
 6.Input the details of each subject
+
 7.Use a for loop to read the name and marks of each subject using scanf. For each subject, store the name as a string and marks as an integer in the dynamically allocated memory.
 
 8.Display the details of each subject
@@ -218,20 +231,26 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+#include<stdio.h>
+struct std{
+    char name[20];
+    int roll;
+    float per;
+}acc;
 
-
-
-
+int main(){
+    scanf("%d",&acc.roll);
+    scanf("%s",acc.name);
+    scanf("%f",&acc.per);
+    printf("Rollno is: %d\n",acc.roll);
+    printf("Name is: %s\n",acc.name);
+    printf("Percentage is: %.2f",acc.per);
+}
+```
 Output:
 
-
-//paste your output here
-
-
-
-
-
+![Screenshot 2025-04-27 154519](https://github.com/user-attachments/assets/62fbba22-19bd-467c-b779-706848656517)
 
 Result:
 Thus, the program is verified successfully
