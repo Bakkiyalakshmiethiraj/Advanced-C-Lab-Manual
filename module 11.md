@@ -226,14 +226,12 @@ Thus, the program prints the sum of the integers in the array is verified succes
 
 
  
-EXP NO 25: C PROGRAM TO COUNT THE NUMBER OF WORDS IN A SENTENCE
+## EXP NO 5E : C PROGRAM TO COUNT THE NUMBER OF WORDS IN A SENTENCE
 
-Aim:
-
+## Aim:
 To write a C program that counts the number of words in a given sentence.
 
-Algorithm:
-
+## Algorithm:
 1.	Input the sentence: Take a sentence from the user.
 2.	Initialize a counter variable: This will keep track of the number of words.
 3.	Process each character of the sentence:
@@ -242,17 +240,28 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 4.	Handle spaces and punctuation: Skip over spaces, punctuation marks, and consider each word as a sequence of characters separated by spaces.
 5.	Display the result: After processing the sentence, output the total word count.
 
+## Program:
+~~~
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    fgets(str,sizeof(str),stdin);
+    int len=sizeof(str);
+    int count=1;
+     for(int i=0;i<len-1;i++){
+         if(str[i]==' ')
+         count++;
+         
+     }
+     printf("Total number of words in the string is :%d",count);
+    return 0;
+}
+~~~
+## Output:
+![437947831-e5b10af6-0a8e-4ddf-9c16-a6a90d5c1884](https://github.com/user-attachments/assets/87cbd681-16a1-48c9-bf47-8e9e8d8dbad0)
 
-
-Program:
-//type your code here
-
-Output:
-//paste your output here
-
-
-
-Result:
-
+## Result:
 Thus, the program that counts the number of words in a given sentence is verified 
 successfully.
